@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% load staticfiles %}
+{% block content %}
+    <h2>Manas Vilãs</h2>
+    <section>
+        {% for vila in vilas %}
+            <div class="card">
+                <div>
+                    <img src="/{{vila.foto.url}}" alt="">
+                </div>
+                <h2>{{vila.nome}}</h2>
+                <p>Habilidades: {{vila.habilidades}}</p>
+                <p>Número de mortes: {{vila.mortes}}</p>
+                <p>Arma: {{vila.armas}}</p>
+            </div>
+        {% endfor %}
+    </section>
+{% endblock %}
